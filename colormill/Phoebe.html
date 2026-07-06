@@ -33,6 +33,30 @@
 			  <center>
                 <h1><b>Phoebe</b></h1>
 				<h5>Introduced 6 July 2026</h5>
+				<h2>Phoebe's Associated Music:</h2>
+				<a href="#" id="musicToggle" style="font-size:20px">Play Music</a>
+
+				<audio id="music" loop>
+				  <source src="https://pub-48056565d417417ba8d26e692aff9e26.r2.dev/phoebetheme.wav" type="audio/wav">
+				</audio>
+		
+				<script>
+				const toggle = document.getElementById("musicToggle");
+				const music = document.getElementById("music");
+		
+				toggle.addEventListener("click", function (e) {
+				  e.preventDefault();
+		
+				  if (music.paused) {
+					music.play();
+					toggle.textContent = "Stop Music";
+				  } else {
+					music.pause();
+					toggle.textContent = "Play Music";
+				  }
+				});
+				</script>
+				<p><i>"Phoebe's Theme: The Unwound Sunflower"</i></p>
 				<h2>General Information:</h2>
 			  </center>
 			  <p>Phoebe is a recurring character in Colormill.</p>
